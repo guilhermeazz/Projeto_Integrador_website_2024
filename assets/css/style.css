@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+    background-color: #012840;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.logo img {
+    height: 100px;;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #DDEBF9;
+}
+
+nav button {
+   padding: 0px;
+   border: 0px;
+   background-color: transparent;
+}
+
+nav button img {
+    height: 70px;
+}
+
+.profile {
+    margin-left: auto;
+}
+
+.nav-links li:hover {
+    filter: brightness(70%);
+}
+
+.profile button:hover img {
+    filter: brightness(85%);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.descricao {
+    margin-bottom: 50px;
+}
+
+.descricao h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.descricao p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicos-produtos h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.servicos-produtos p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.servicos-produtos ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.servicos-produtos li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+
+footer {
+    background-color: #012840;
+    color: #DDEBF9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais,
+.contato {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.redes-sociais h3,
+.contato h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.redes-sociais ul,
+.contato p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.redes-sociais ul li,
+.contato p {
+    margin-bottom: 5px;
+}
+
+.redes-sociais ul li a {
+    color: #DDEBF9;
+    text-decoration: none;
+}
+
+.redes-sociais ul li a:hover {
+    filter: brightness(70%);
+}
