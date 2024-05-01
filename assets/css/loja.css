@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 0;
+    max-width: 1796px;
+}
+
+.loja {
+    display: flex;
+}
+
+.conteudo {
+    flex-grow: 1; 
+}
+
+.pesquisa {
+    display: flex;
+    width: 100%;
+    padding-right: 20px; 
+}
+
+.pesquisa_input {
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+}
+
+.pesquisa button {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.carrinho_compra {
+    width: 300px; 
+    height: 100vh; 
+    margin-left: 10px;
+    background-color: #f0f0f0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #012840;
+}
+
+.nav_carrinho {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 3px solid #012840;
+}
+
+.nav_carrinho h3 {
+    margin-right: 10px;
+}
+
+.conteudo_carrinho {
+    width: 100%;
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+.conteudo_carrinho p {
+    margin-left: 30px;
+}
+
+.somatoria {
+    width: 100%;
+    border-bottom: 3px solid #012840;
+    border-top: 3px solid #012840;
+}
+
+.somatoria p {
+    margin-left: 30px;
+}
+
+.confirmar_compra button{
+    border: 0;
+    width: 294px;
+    height: 30px;
+    flex-grow: 1; 
+    background-color: #7cc5c3;
+}
+
+.itens {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.itens h4 {
+    color: red;
+}
+

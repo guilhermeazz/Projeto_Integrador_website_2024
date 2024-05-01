@@ -32,3 +32,48 @@ main {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.chat h4 {
+    margin-top: 0;
+}
+
+.chat p {
+    margin-bottom: 15px;
+}
+
+.duvida textarea {
+    width: 100%;
+    height: 100px; 
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; 
+}
+
+.duvida button {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.duvida button:hover {
+    background-color: #45a049;
+}
+
+.contato {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contato a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
