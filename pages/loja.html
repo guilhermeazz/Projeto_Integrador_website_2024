@@ -38,36 +38,39 @@
     <main>
         <div class="loja">
             
-            <div class="itens">
-                <div class="card" style="width: 18rem; height: 32rem;">
-                    <img src="../assets/img/caboRede.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Cabo de rede RJ45 15m</h5>
-                      <p class="card-text">Cabo de rede Cat6 15m rj45 internet Lan Giga 10/100.</p>
-                      <h4>R$23,00</h4>
-                      <a href="#" class="btn btn-primary">adicionar ao carrinho</a>
+            <div class="container mt-4">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
+                      <div class="card-body">
+                        <h5 class="card-title">Nome do Produto</h5>
+                        <p class="card-text">R$ 99,99</p>
+                        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                      </div>
                     </div>
-                </div>
-                <div class="card" style="width: 18rem; height: 32rem;">
-                    <img src="../assets/img/caboRede.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Cabo de rede RJ45 15m</h5>
-                      <p class="card-text">Cabo de rede Cat6 15m rj45 internet Lan Giga 10/100.</p>
-                      <h4>R$23,00</h4>
-                      <a href="#" class="btn btn-primary">adicionar ao carrinho</a>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
+                      <div class="card-body">
+                        <h5 class="card-title">Nome do Produto</h5>
+                        <p class="card-text">R$ 99,99</p>
+                        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                      </div>
                     </div>
-                </div>
-                <div class="card" style="width: 18rem; height: 32rem;">
-                    <img src="../assets/img/caboRede.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Cabo de rede RJ45 15m</h5>
-                      <p class="card-text">Cabo de rede Cat6 15m rj45 internet Lan Giga 10/100.</p>
-                      <h4>R$23,00</h4>
-                      <a href="#" class="btn btn-primary">adicionar ao carrinho</a>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
+                      <div class="card-body">
+                        <h5 class="card-title">Nome do Produto</h5>
+                        <p class="card-text">R$ 99,99</p>
+                        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
-                  
             </div>
 
             <div class="carrinho_compra">
@@ -75,14 +78,35 @@
                     <h3>Carrinho de compras</h3>
                     <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #012840;"></i>
                 </div>
-                <div class="conteudo_carrinho">
-                    <p class="itens">Carrinho Vazio</p>
-                </div>
-                <div class="somatoria">
-                    <p>Total:</p>
-                </div>
-                <div class="confirmar_compra">
-                    <button> Comprar </button>
+
+                <div class="organizar_compras">
+                    <div class="lista_carrinho">
+                        <div class="conteudo_carrinho">
+                            <div class="img_produto_carrinho">
+                                <img src="../assets/img/caboRede.webp" alt="imagem do cabo de rede de 15m com rj45" class="img_produto">
+                            </div>
+                            <p>Cabo de rede 15m</p>
+                            <h4>R$23,00</h4>
+                            <form action="excluir.php" method="post">
+                                <input type="hidden" name="id_produto" value="">
+                                <button type="submit" style="border:none; background:none;"><i class="fa-solid fa-trash" style="color: #012840;"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="carrinho_vazio">
+                        <p>Seu Carrinho está vazio.</p>
+                    </div>
+
+                    <div>
+                        <div class="somatoria">
+                            <p>Total:</p>
+                            <p>R$23,00</p>
+                        </div>
+                        <div class="confirmar_compra">
+                            <button> Comprar </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,6 +132,9 @@
     
 <script src="../assets/js/script.js"></script>
 <script src="https://kit.fontawesome.com/970adb6dd1.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
 </body>
 </html>
