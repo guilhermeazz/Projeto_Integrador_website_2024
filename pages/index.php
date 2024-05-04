@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-
     <header>
         <nav>
             <div class="logo"><a href="index.html"><img src="../assets/img/infratech_logo.png" alt="Logo da Infratech"></a></div>
@@ -24,14 +22,22 @@
             </div>
             <div class="profile">
                 <button class="profile-btn" onclick="toggleMenu()">
-                    <img src="../assets/img/icone_perfil.png" alt="icone de perfil, função de logar ao site">
+                    <img src="../assets/img/icone_perfil.png" alt="Ícone de perfil, função de logar ao site">
                 </button>
-                <div class="profile-menu" id="profileMenu">
-                    <a href="#">Configurações</a>
-                    <a href="#">Perfil</a>
-                    <a href="#">Compras</a>
-                    <a href="#">Sair</a>
-                  </div>
+                <?php 
+                session_start();
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) { ?>
+                    <div class="profile-menu" id="profileMenu">
+                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/perfil.php">Perfil</a>
+                        <a href="compras.html">Compras</a>
+                        <button onclick="logout()">Sair</button>
+                    </div>
+                <?php } else { ?>
+                    <div class="profile-menu" id="profileMenu">
+                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
+                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
+                    </div>
+                <?php } ?>
             </div>
         </nav>
     </header>
@@ -80,7 +86,6 @@
             <p>Telefone: (XX) XXXX-XXXX</p>
         </div>
     </footer>
-    
     
 <script src="../assets/js/script.js"></script>
 </body>
