@@ -12,23 +12,37 @@
 </head>
 <body>
 
-    <header>
+<header>
         <nav>
             <div class="logo"><a href="index.html"><img src="../assets/img/infratech_logo.png" alt="Logo da Infratech"></a></div>
             <div>
             </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="ajuda.html">Ajuda</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="index.php">Início</a></li>
+                    <li><a href="loja.php">Loja</a></li>
+                    <li><a href="servicos.php">Serviços</a></li>
+                    <li><a href="ajuda.php">Ajuda</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
                 </ul>
             </div>
             <div class="profile">
-                <button>
-                    <img src="../assets/img/icone_perfil.png" alt="icone de perfil, função de logar ao site">
+                <button class="profile-btn" onclick="toggleMenu()">
+                    <img src="../assets/img/icone_perfil.png" alt="Ícone de perfil, função de logar ao site">
                 </button>
+                <?php 
+                session_start();
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) { ?>
+                    <div class="profile-menu" id="profileMenu">
+                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/perfil.php">Perfil</a>
+                        <a href="compras.html">Compras</a>
+                        <button onclick="logout()">Sair</button>
+                    </div>
+                <?php } else { ?>
+                    <div class="profile-menu" id="profileMenu">
+                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
+                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
+                    </div>
+                <?php } ?>
             </div>
         </nav>
     </header>

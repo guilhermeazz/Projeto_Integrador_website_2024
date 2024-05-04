@@ -13,11 +13,11 @@
             <div>
             </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="ajuda.html">Ajuda</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="index.php">Início</a></li>
+                    <li><a href="loja.php">Loja</a></li>
+                    <li><a href="servicos.php">Serviços</a></li>
+                    <li><a href="ajuda.php">Ajuda</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
                 </ul>
             </div>
             <div class="profile">
