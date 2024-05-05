@@ -56,7 +56,7 @@
                 <img src="../assets/img/caboRede.webp" alt="Nome do Produto">
             </div>
             <div class="product-info">
-                <h1>Nome do Produto</h1>
+                <h1>Cabo De Rede Cat6 15 Metros Rj45</h1>
                 <p>Obtenha conexões de alta velocidade e desempenho confiável com o Cabo de Rede Cat6. Com taxas de transferência de até 10Gbps em até 100 metros, este cabo é o padrão para Ethernet com par trançado, oferecendo uma solução robusta e confiável. O cabo Cat6 é ideal para empresas e profissionais que exigem velocidades de transmissão rápidas e mínima interferência. Sua construção sólida e menos flexível garante maior durabilidade e desempenho estável. Com uma frequência de 150MHz, o cabo Cat6 suporta largura de banda de 1Gbps a uma distância de 100 metros e largura de banda de 10Gbps a uma distância de 55 metros. Isso significa que você pode desfrutar de conexões rápidas e confiáveis em toda a sua rede. O cabo de rede Cat6 possui certificação Anatel (05190-22-06448), garantindo sua qualidade e conformidade com as normas de telecomunicações. Obtenha o máximo desempenho e confiabilidade para suas necessidades de rede com o Cabo de Rede Cat6. Invista na melhor solução para transmissões de alta velocidade e minimize a interferência. Desfrute de conexões rápidas e estáveis em sua rede. *Observação: A velocidade real da conexão depende também dos dispositivos e configurações de rede utilizados. Estamos à disposição para tirar suas dúvidas e oferecer suporte. Aproveite essa oferta exclusiva!</p>
                 <p>Preço: R$ 99,99</p>
                 
