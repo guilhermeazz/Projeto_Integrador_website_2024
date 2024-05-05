@@ -58,7 +58,7 @@
                     <div class="card">
                       <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
                       <div class="card-body">
-                        <h5 class="card-title">Nome do Produto</h5>
+                        <h5 class="card-title">Cabo De Rede Cat6 15 Metros Rj45</h5>
                         <p class="card-text">R$ 99,99</p>
                         <a href="../pages/produto.php" class="btn btn-primary">Detalhes</a>
                         <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -69,7 +69,7 @@
                     <div class="card">
                       <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
                       <div class="card-body">
-                        <h5 class="card-title">Nome do Produto</h5>
+                        <h5 class="card-title">Cabo De Rede Cat6 15 Metros Rj45</h5>
                         <p class="card-text">R$ 99,99</p>
                         <a href="../pages/produto.php" class="btn btn-primary">Detalhes</a>
                         <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
@@ -80,7 +80,7 @@
                     <div class="card">
                       <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
                       <div class="card-body">
-                        <h5 class="card-title">Nome do Produto</h5>
+                        <h5 class="card-title">Cabo De Rede Cat6 15 Metros Rj45</h5>
                         <p class="card-text">R$ 99,99</p>
                         <a href="../pages/produto.php" class="btn btn-primary">Detalhes</a>
                         <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
