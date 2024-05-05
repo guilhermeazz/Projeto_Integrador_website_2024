@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    height: 300px;
+}
+
+.product-detail {
+    margin: 10px;
+}

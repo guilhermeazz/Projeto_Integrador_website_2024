@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/loja.css">
+    <link rel="stylesheet" href="../assets/css/produto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font/awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -50,54 +51,9 @@
     </header>
 
     <main>
-
-        <div class="container mt-4">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
-                  <div class="card-body">
-                    <h5 class="card-title">Orçamento</h5>
-                    <p class="card-text">Realizamos seu orçamento, considerando o espaço da instalação e os produtos que deseja.</p>
-                    <a href="../pages/detalhe_servico.php" class="btn btn-primary">Acessar</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
-                  <div class="card-body">
-                    <h5 class="card-title">Instalação</h5>
-                    <p class="card-text">Caso já tenha os equipamentos, mas deseja o nosso serviço de instalação.</p>
-                    <a href="#" class="btn btn-primary">Acessar</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
-                  <div class="card-body">
-                    <h5 class="card-title">Assistência</h5>
-                    <p class="card-text">Oferecemos ajuda em relação aos produto ou alguma instalação nossa<br>.</p>
-                    <a href="#" class="btn btn-primary">Acessar</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
-                  <div class="card-body">
-                    <h5 class="card-title">Atendimento online</h5>
-                    <p class="card-text">Precisa de alguma outra ajuda, ou tirar uma duvida. Você pode optar em nos contactar diretamente.</p>
-                    <a href="#" class="btn btn-primary">Acessar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
+       
     </main>
-    
+
     <footer>
         <div class="redes-sociais">
             <h3>Redes Sociais</h3>
@@ -116,11 +72,12 @@
         </div>
     </footer>
     
-    <script src="../assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/970adb6dd1.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script src="../assets/js/script.js"></script>
+<script src="https://kit.fontawesome.com/970adb6dd1.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../assets/js/loja.js"><script>
+    
 </body>
 </html>

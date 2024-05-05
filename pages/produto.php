@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/loja.css">
+    <link rel="stylesheet" href="../assets/css/produto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font/awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -50,47 +51,22 @@
     </header>
 
     <main>
-        <div class="loja">
-            
-            <div class="container mt-4">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card">
-                      <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
-                      <div class="card-body">
-                        <h5 class="card-title">Nome do Produto</h5>
-                        <p class="card-text">R$ 99,99</p>
-                        <a href="../pages/produto.php" class="btn btn-primary">Detalhes</a>
-                        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
-                      <div class="card-body">
-                        <h5 class="card-title">Nome do Produto</h5>
-                        <p class="card-text">R$ 99,99</p>
-                        <a href="../pages/produto.php" class="btn btn-primary">Detalhes</a>
-                        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card">
-                      <img src="../assets/img/caboRede.webp" class="card-img-top" alt="Imagem do produto">
-                      <div class="card-body">
-                        <h5 class="card-title">Nome do Produto</h5>
-                        <p class="card-text">R$ 99,99</p>
-                        <a href="../pages/produto.php" class="btn btn-primary">Detalhes</a>
-                        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="product-details">
+            <div class="product-gallery">
+                <img src="../assets/img/caboRede.webp" alt="Nome do Produto">
             </div>
-
-            <div class="carrinho_compra">
+            <div class="product-info">
+                <h1>Nome do Produto</h1>
+                <p>Obtenha conexões de alta velocidade e desempenho confiável com o Cabo de Rede Cat6. Com taxas de transferência de até 10Gbps em até 100 metros, este cabo é o padrão para Ethernet com par trançado, oferecendo uma solução robusta e confiável. O cabo Cat6 é ideal para empresas e profissionais que exigem velocidades de transmissão rápidas e mínima interferência. Sua construção sólida e menos flexível garante maior durabilidade e desempenho estável. Com uma frequência de 150MHz, o cabo Cat6 suporta largura de banda de 1Gbps a uma distância de 100 metros e largura de banda de 10Gbps a uma distância de 55 metros. Isso significa que você pode desfrutar de conexões rápidas e confiáveis em toda a sua rede. O cabo de rede Cat6 possui certificação Anatel (05190-22-06448), garantindo sua qualidade e conformidade com as normas de telecomunicações. Obtenha o máximo desempenho e confiabilidade para suas necessidades de rede com o Cabo de Rede Cat6. Invista na melhor solução para transmissões de alta velocidade e minimize a interferência. Desfrute de conexões rápidas e estáveis em sua rede. *Observação: A velocidade real da conexão depende também dos dispositivos e configurações de rede utilizados. Estamos à disposição para tirar suas dúvidas e oferecer suporte. Aproveite essa oferta exclusiva!</p>
+                <p>Preço: R$ 99,99</p>
+                
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                
+                <button class="add-to-cart-button">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="carrinho_compra">
                 <div class="nav_carrinho">
                     <h3>Carrinho de compras</h3>
                     <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #012840;"></i>
@@ -126,7 +102,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </main>
 
     <footer>
