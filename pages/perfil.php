@@ -1,9 +1,26 @@
 <?php
 session_start(); 
+include '../backend/bd_config.php'; // Inclua o arquivo de configuração do banco de dados
 
-if (isset($_SESSION['registered_user'])) {
-    $userData = $_SESSION['registered_user'];
+if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+    $email = $_SESSION['user_email']; // Obtenha o email do usuário da sessão
+
+    // Consulta SQL para selecionar os dados do usuário com o email fornecido
+    $sql = "SELECT * FROM usuario WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 1) {
+        $userData = $result->fetch_assoc();
+    } else {
+        // Se não houver correspondência de usuário, redirecione para a página de login
+        header('Location: http://localhost/www/projeto_integrador_2024_website/pages/login.html');
+        exit();
+    }
 } else {
+    // Se o usuário não estiver logado, redirecione para a página de login
     header('Location: http://localhost/www/projeto_integrador_2024_website/pages/login.html');
     exit();
 }
@@ -17,6 +34,7 @@ if (isset($_SESSION['registered_user'])) {
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/perfil.css">
+    <link rel="stylesheet" href="../assets/css/cookie.css">
 </head>
 <body>
     <header>
@@ -48,7 +66,7 @@ if (isset($_SESSION['registered_user'])) {
             <h4>Meu Perfil</h4>
             <form>
                 <label for="nome_completo">Nome Completo:</label><br>
-                <input type="text" id="nome_completo" name="nome_completo" value="<?php echo $userData['nome_completo']; ?>" readonly><br>
+                <input type="text" id="nome_completo" name="nome_completo" value="<?php echo $userData['nome']; ?>" readonly><br>
                 
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" value="<?php echo $userData['email']; ?>" readonly><br>
@@ -57,7 +75,7 @@ if (isset($_SESSION['registered_user'])) {
                 <input type="tel" id="celular" name="celular" value="<?php echo isset($userData['celular']) ? $userData['celular'] : ''; ?>" readonly><br>
                 
                 <label for="data_nascimento">Data de Nascimento:</label><br>
-                <input type="date" id="data_nascimento" name="data_nascimento" value="<?php echo $userData['data_nascimento']; ?>" readonly><br>
+                <input type="date" id="data_nascimento" name="data_nascimento" value="<?php echo $userData['data_nasc']; ?>" readonly><br>
             </form>
         </div>
     </main>
@@ -80,8 +98,17 @@ if (isset($_SESSION['registered_user'])) {
             <p>Telefone: (XX) XXXX-XXXX</p>
         </div>
     </footer>
-    
+
+    <div class="cookie-consent" id="cookieConsent">
+        Nosso site utiliza cookies e tecnologias semelhantes, como explicado em nossa <a href="politica_privacidade.html">Política de Privacidade</a>.
+        <button class="btn btn-primary btn-custom ms-2" onclick="acceptCookies()">OK</button>
+    </div>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJCXTvIpewj6I1vBpnW9pZCYtb1C2kGp5f3KlFuy6xkevTylCQnUlTklPq7G1F6Z" crossorigin="anonymous"></script>    
+
 <script src="../assets/js/script.js"></script>
 <script src="../assets/js/perfil.js"></script>
+<script src="../assets/js/cookie.js"></script>
 </body>
 </html>

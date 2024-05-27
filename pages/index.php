@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Jkhhrzv9iiEMYOch9/NjbN9KScGeuJ2u3X8z9L3FP+8lZTf/U4F5r5Tf9t5T/FxD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/cookie.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo"><a href="index.html"><img src="../assets/img/infratech_logo.png" alt="Logo da Infratech"></a></div>
             <div>
-            </div>
                 <ul class="nav-links">
                     <li><a href="index.php">Início</a></li>
                     <li><a href="loja.php">Loja</a></li>
@@ -24,19 +25,35 @@
                 <button class="profile-btn" onclick="toggleMenu()">
                     <img src="../assets/img/icone_perfil.png" alt="Ícone de perfil, função de logar ao site">
                 </button>
-                <?php 
+                <?php
                 session_start();
-                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) { ?>
-                    <div class="profile-menu" id="profileMenu">
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/perfil.php">Perfil</a>
-                        <a href="compras.html">Compras</a>
-                        <button onclick="logout()">Sair</button>
-                    </div>
-                <?php } else { ?>
-                    <div class="profile-menu" id="profileMenu">
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
-                    </div>
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+                    include '../backend/bd_config.php'; // Inclua o arquivo de configuração do banco de dados
+
+                    // Consulta SQL para obter os dados do usuário logado
+                    $email = $_SESSION['user_email']; // Obtenha o email do usuário da sessão
+                    $sql = "SELECT * FROM usuario WHERE email = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows === 1) {
+                        $userData = $result->fetch_assoc();
+                ?>
+                <div class="profile-menu" id="profileMenu">
+                    <a href="perfil.php">Perfil</a>
+                    <a href="minhas_compras.php">Compras</a>
+                    <button onclick="logout()">Sair</button>
+                </div>
+                <?php } else {
+                        echo "Erro ao obter dados do usuário.";
+                    }
+                } else { ?>
+                <div class="profile-menu" id="profileMenu">
+                    <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
+                    <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
+                </div>
                 <?php } ?>
             </div>
         </nav>
@@ -86,7 +103,18 @@
             <p>Telefone: (XX) XXXX-XXXX</p>
         </div>
     </footer>
-    
+
+    <div class="cookie-consent" id="cookieConsent">
+        Nosso site utiliza cookies e tecnologias semelhantes, como explicado em nossa <a href="politica_privacidade.html">Política de Privacidade</a>.
+        <button class="btn btn-primary btn-custom ms-2" onclick="acceptCookies()">OK</button>
+    </div>
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJCXTvIpewj6I1vBpnW9pZCYtb1C2kGp5f3KlFuy6xkevTylCQnUlTklPq7G1F6Z" crossorigin="anonymous"></script>
+
 <script src="../assets/js/script.js"></script>
+<script src="../assets/js/cookie.js"></script>
+
 </body>
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/ajuda.css">
+    <link rel="stylesheet" href="../assets/css/cookie.css">
 
 </head>
 <body>
@@ -29,19 +30,35 @@
                 <button class="profile-btn" onclick="toggleMenu()">
                     <img src="../assets/img/icone_perfil.png" alt="Ícone de perfil, função de logar ao site">
                 </button>
-                <?php 
+                <?php
                 session_start();
-                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) { ?>
-                    <div class="profile-menu" id="profileMenu">
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/perfil.php">Perfil</a>
-                        <a href="compras.html">Compras</a>
-                        <button onclick="logout()">Sair</button>
-                    </div>
-                <?php } else { ?>
-                    <div class="profile-menu" id="profileMenu">
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
-                    </div>
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+                    include '../backend/bd_config.php'; 
+
+                    // Consulta SQL para obter os dados do usuário logado
+                    $email = $_SESSION['user_email']; // Obtenha o email do usuário da sessão
+                    $sql = "SELECT * FROM usuario WHERE email = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows === 1) {
+                        $userData = $result->fetch_assoc();
+                ?>
+                <div class="profile-menu" id="profileMenu">
+                    <a href="perfil.php">Perfil</a>
+                    <a href="minhas_compras.php">Compras</a>
+                    <button onclick="logout()">Sair</button>
+                </div>
+                <?php } else {
+                        echo "Erro ao obter dados do usuário.";
+                    }
+                } else { ?>
+                <div class="profile-menu" id="profileMenu">
+                    <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
+                    <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
+                </div>
                 <?php } ?>
             </div>
         </nav>
@@ -59,7 +76,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Vá até a nossa seção de <a href="servicos.html">serviços</a> e escolha a opção de orçamento. Inicie uma solicitação e então um de nossos atendentes irá entrar em comunicação para apurar dados e prosseguir com o orçamento.</div>
+                        <div class="accordion-body">Vá até a nossa seção de <a href="servicos.php">serviços</a> e escolha a opção de orçamento. Inicie uma solicitação e então um de nossos atendentes irá entrar em comunicação para apurar dados e prosseguir com o orçamento.</div>
                       </div>
                     </div>
                     <div class="accordion-item">
@@ -69,7 +86,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body"> Após a realização de uma compra de nossa <a href="loja.html">loja</a> o processo de entrega será registrado, passo a passo localizado em minhas comprar dentro em suas opções de conta.</div>
+                        <div class="accordion-body"> Após a realização de uma compra de nossa <a href="loja.php">loja</a> o processo de entrega será registrado, passo a passo localizado em minhas comprar dentro em suas opções de conta.</div>
                       </div>
                     </div>
                     <div class="accordion-item">
@@ -79,7 +96,7 @@
                         </button>
                       </h2>
                       <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">A Connect Infratech oferece além dos produtos da loja, támbem a instalação dos equipamentos de rede, assim como a adequação e prparação do espaço. Para isso é preciso realizar um orçamento, indo a seção de <a href="servicos.html">Serviços</a> e depois indo a opção de orçamento.</div>
+                        <div class="accordion-body">A Connect Infratech oferece além dos produtos da loja, támbem a instalação dos equipamentos de rede, assim como a adequação e prparação do espaço. Para isso é preciso realizar um orçamento, indo a seção de <a href="servicos.php">Serviços</a> e depois indo a opção de orçamento.</div>
                       </div>
                     </div>
                     <div class="accordion-item">
@@ -89,7 +106,7 @@
                             </button>
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Caso algum produto nosso, do qual você tenha comprado apresente algum problema, entre em contato conosco por meio do setor de <a href="servicos.html">Serviços,e indo até a opção deconversar com um atendente.</a></div>
+                            <div class="accordion-body">Caso algum produto nosso, do qual você tenha comprado apresente algum problema, entre em contato conosco por meio do setor de <a href="servicos.php">Serviços,e indo até a opção deconversar com um atendente.</a></div>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -113,7 +130,7 @@
               <button>Enviar</button>
             </div>
             <div class="contato">
-              <p>Ou entre em contado com um de nossos atendentes clicando <a href="servicos.html">aqui</a>.</p>
+              <p>Ou entre em contado com um de nossos atendentes clicando <a href="">aqui</a>.</p>
             </div>
           </div>
         </div>
@@ -136,8 +153,18 @@
             <p>Telefone: (XX) XXXX-XXXX</p>
         </div>
     </footer>
+
+    <div class="cookie-consent" id="cookieConsent">
+        Nosso site utiliza cookies e tecnologias semelhantes, como explicado em nossa <a href="politica_privacidade.html">Política de Privacidade</a>.
+        <button class="btn btn-primary btn-custom ms-2" onclick="acceptCookies()">OK</button>
+    </div>
     
 <script src="../assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script src="../assets/js/cookie.js"></script>
+
 </body>
 </html>

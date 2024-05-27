@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/perfil.css">
+    <link rel="stylesheet" href="../assets/css/cookie.css">
 </head>
 <body>
     <header>
@@ -57,8 +58,17 @@
             <p>Telefone: (XX) XXXX-XXXX</p>
         </div>
     </footer>
+
+    <div class="cookie-consent" id="cookieConsent">
+        Nosso site utiliza cookies e tecnologias semelhantes, como explicado em nossa <a href="politica_privacidade.html">Política de Privacidade</a>.
+        <button class="btn btn-primary btn-custom ms-2" onclick="acceptCookies()">OK</button>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJCXTvIpewj6I1vBpnW9pZCYtb1C2kGp5f3KlFuy6xkevTylCQnUlTklPq7G1F6Z" crossorigin="anonymous"></script>
     
 <script src="../assets/js/script.js"></script>
 <script src="../assets/js/perfil.js"></script>
+<script src="../assets/js/cookie.js"></script>
 </body>
 </html>

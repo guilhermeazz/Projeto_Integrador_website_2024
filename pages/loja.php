@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/loja.css">
+    <link rel="stylesheet" href="../assets/css/cookie.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font/awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -31,19 +32,35 @@
                 <button class="profile-btn" onclick="toggleMenu()">
                     <img src="../assets/img/icone_perfil.png" alt="Ícone de perfil, função de logar ao site">
                 </button>
-                <?php 
+                <?php
                 session_start();
-                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) { ?>
-                    <div class="profile-menu" id="profileMenu">
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/perfil.php">Perfil</a>
-                        <a href="compras.html">Compras</a>
-                        <button onclick="logout()">Sair</button>
-                    </div>
-                <?php } else { ?>
-                    <div class="profile-menu" id="profileMenu">
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
-                        <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
-                    </div>
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+                    include '../backend/bd_config.php'; // Inclua o arquivo de configuração do banco de dados
+
+                    // Consulta SQL para obter os dados do usuário logado
+                    $email = $_SESSION['user_email']; // Obtenha o email do usuário da sessão
+                    $sql = "SELECT * FROM usuario WHERE email = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows === 1) {
+                        $userData = $result->fetch_assoc();
+                ?>
+                <div class="profile-menu" id="profileMenu">
+                    <a href="perfil.php">Perfil</a>
+                    <a href="minhas_compras.php">Compras</a>
+                    <button onclick="logout()">Sair</button>
+                </div>
+                <?php } else {
+                        echo "Erro ao obter dados do usuário.";
+                    }
+                } else { ?>
+                <div class="profile-menu" id="profileMenu">
+                    <a href="http://localhost/www/projeto_integrador_2024_website/pages/login.html">Logar</a>
+                    <a href="http://localhost/www/projeto_integrador_2024_website/pages/cadastro.html">Cadastrar</a>
+                </div>
                 <?php } ?>
             </div>
         </nav>
@@ -146,6 +163,11 @@
             <p>Telefone: (XX) XXXX-XXXX</p>
         </div>
     </footer>
+
+    <div class="cookie-consent" id="cookieConsent">
+        Nosso site utiliza cookies e tecnologias semelhantes, como explicado em nossa <a href="politica_privacidade.html">Política de Privacidade</a>.
+        <button class="btn btn-primary btn-custom ms-2" onclick="acceptCookies()">OK</button>
+    </div>
     
 <script src="../assets/js/script.js"></script>
 <script src="https://kit.fontawesome.com/970adb6dd1.js" crossorigin="anonymous"></script>
@@ -153,6 +175,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../assets/js/loja.js"><script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script src="../assets/js/cookie.js"></script>
     
 </body>
 </html>
