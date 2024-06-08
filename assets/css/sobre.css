@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
 main {
     display: flex;
     justify-content: space-between;
@@ -15,4 +17,28 @@ aside {
     width: 200px;
     height: 100%;
     padding: 20px;
+}
+
+.about-us h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.termos_uso p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.politicas p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }

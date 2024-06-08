@@ -10,3 +10,15 @@ img {
 .product-detail {
     margin: 10px;
 }
+
+.text-large {
+    font-size: 24px;
+}
+
+.text-center {
+    font-size: 24px;
+}
+
+.text-center mb-4{
+    font-size: 30px;
+}

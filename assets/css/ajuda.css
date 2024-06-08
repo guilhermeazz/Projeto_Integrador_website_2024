@@ -77,3 +77,7 @@ main {
 .contato a:hover {
     text-decoration: underline;
 }
+
+.text-large {
+    font-size: 24px;
+}

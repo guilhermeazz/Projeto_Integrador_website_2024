@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/e.css">
     <link rel="stylesheet" href="../assets/css/loja.css">
     <link rel="stylesheet" href="../assets/css/produto.css">
-    <link rel="stylesheet" href="../assets/css/cookie.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font/awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -79,10 +78,10 @@
                         Na nossa empresa de cabeamento, oferecemos serviços de orçamento personalizados para atender às necessidades específicas dos nossos clientes. Nossos serviços de orçamento incluem:
                     </p>
                     <ul>
-                        <li>Inspeção no Local: Enviamos nossa equipe técnica para realizar uma inspeção detalhada do local para entender as necessidades de cabeamento.</li>
-                        <li>Avaliação das Necessidades: Com base na inspeção, avaliamos as necessidades de cabos de rede, pontos de acesso, tipo de cabeamento necessário, etc.</li>
-                        <li>Elaboração do Orçamento: Com as informações coletadas, preparamos um orçamento detalhado que inclui todos os custos associados ao projeto de cabeamento.</li>
-                        <li>Consultoria Personalizada: Nossa equipe de especialistas está disponível para oferecer consultoria personalizada e responder a quaisquer dúvidas relacionadas ao orçamento e ao projeto de cabeamento.</li>
+                        <li class='text-large'>Inspeção no Local: Enviamos nossa equipe técnica para realizar uma inspeção detalhada do local para entender as necessidades de cabeamento.</li>
+                        <li class='text-large'>Avaliação das Necessidades: Com base na inspeção, avaliamos as necessidades de cabos de rede, pontos de acesso, tipo de cabeamento necessário, etc.</li>
+                        <li class='text-large'>Elaboração do Orçamento: Com as informações coletadas, preparamos um orçamento detalhado que inclui todos os custos associados ao projeto de cabeamento.</li>
+                        <li class='text-large'>Consultoria Personalizada: Nossa equipe de especialistas está disponível para oferecer consultoria personalizada e responder a quaisquer dúvidas relacionadas ao orçamento e ao projeto de cabeamento.</li>
                     </ul>
                     <p class="text-center mt-4">
                         Descreva sua solicitação detalhadamente abaixo:

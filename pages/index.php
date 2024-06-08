@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Jkhhrzv9iiEMYOch9/NjbN9KScGeuJ2u3X8z9L3FP+8lZTf/U4F5r5Tf9t5T/FxD" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/cookie.css">
+    <link rel="stylesheet" href="../assets/css/e.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font/awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
 </head>
 <body>
     <header>
@@ -60,7 +61,7 @@
     </header>
     <main>
         <section class="descricao">
-            <h2>CONNECT INFRATECH</h2>
+            <h2 class="titulo">CONNECT INFRATECH</h2>
             <p>A Connect Infratech é uma empresa especializada em fornecer infraestrutura de TI para empresas de todos os tamanhos. Com anos de experiência no mercado, oferecemos soluções de cabeamento estruturado e produtos essenciais para garantir o funcionamento eficiente da sua rede.</p>
             <div class="video-container">
                 <video id="background-video" autoplay loop muted>
@@ -71,7 +72,7 @@
         </section>
     
         <section class="servicos-produtos">
-            <h2>Serviços e Produtos</h2>
+            <h2 class="titulo">Serviços e Produtos</h2>
             <p>A Infratech oferece uma variedade de serviços e produtos para atender às necessidades de infraestrutura de TI da sua empresa. Nossos serviços incluem:</p>
             <ul>
                 <li>Cabeamento estruturado</li>
