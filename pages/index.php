@@ -65,7 +65,7 @@
             <p>A Connect Infratech é uma empresa especializada em fornecer infraestrutura de TI para empresas de todos os tamanhos. Com anos de experiência no mercado, oferecemos soluções de cabeamento estruturado e produtos essenciais para garantir o funcionamento eficiente da sua rede.</p>
             <div class="video-container">
                 <video id="background-video" autoplay loop muted>
-                    <source src="../assets/vdi/INFRA.mp4" type="video/mp4">
+                    <source src="../assets/vd/INFRA.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
             </div>
