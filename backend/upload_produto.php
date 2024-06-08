@@ -33,13 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (move_uploaded_file($_FILES['img']['tmp_name'], $upload_path)) {
             // Prepare a inserção no banco de dados
+            $id = $conn->real_escape_string($_POST['id']);
             $nome = $conn->real_escape_string($_POST['nome']);
             $descricao = $conn->real_escape_string($_POST['descricao']);
             $preco = floatval($_POST['preco']);
             $estoque = intval($_POST['estoque']);
             $imagem = $conn->real_escape_string($newfilename);
 
-            $sql = "INSERT INTO produto (nome, descricao, preco, estoque, img) VALUES ('$nome', '$descricao', $preco, $estoque, '$imagem')";
+            $sql = "INSERT INTO produto (id, nome, descricao, preco, estoque, img) VALUES ('$id', '$nome', '$descricao', $preco, $estoque, '$imagem')";
 
             if ($conn->query($sql)) {
                 echo "Produto adicionado com sucesso.";
